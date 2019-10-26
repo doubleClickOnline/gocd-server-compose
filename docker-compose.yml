@@ -1,0 +1,17 @@
+version: "2.1"
+
+services:
+  go-cd: 
+    image: gocd/gocd-server:v19.9.0
+    hostname: localhost # cannot resolve hostname if it is not localhost :(
+    volumes:
+      - ./godata/addons:/godata/addons
+      - ./godata/artifacts:/godata/artifacts
+      - ./godata/config:/godata/config
+      - ./godata/db:/godata/db
+      - ./godata/logs:/godata/logs
+      - ./godata/plugins:/godata/plugins
+      - ./godata/go:/home/go
+    ports:
+      - "8153:8153"
+      - "8154:8154"
