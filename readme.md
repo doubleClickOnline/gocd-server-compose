@@ -1,6 +1,7 @@
 ## Content
 
-Created just to play a bit with gocd server
+Created just to play a bit with gocd server.
+All data persisted outside container in godata directory and sub-directories.
 
  - Start GoCD server in container
 
